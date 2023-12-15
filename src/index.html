@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!-- Navbar start -->
-    <!-- Navbar end -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warehouse Inventory Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Warehouse Inventory Management</h1>
+    <form id="product-form">
+      <input type="text" id="product-name" placeholder="Product Name" />
+      <input type="number" id="product-quantity" placeholder="Quantity" />
+      <input type="number" id="product-price" placeholder="Price" />
+      <button type="submit">Add Product</button>
+    </form>
+    <div id="inventory-list"></div>
+    <div class="sorting">
+      <h2>Tabel Belanja</h2>
+      <select name="" id="">
+        <option value="">nama</option>
+        <option value="">quantity</option>
+        <option value="">total Price</option>
+      </select>
+    </div>
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Quantity</th>
+        <th>Total Harga</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Buku</td>
+        <td>4</td>
+        <td id="total">Rp 20.000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Pensil</td>
+        <td>4</td>
+        <td id="total">Rp 10.000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Penghapus</td>
+        <td>4</td>
+        <td id="total">Rp 5.000</td>
+      </tr>
+    </table>
 
-    <!-- about start -->
-    <!-- about end -->
-
-    <!-- Isi konten start -->
-    <!-- Isi konten end -->
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
