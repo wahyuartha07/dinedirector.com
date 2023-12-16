@@ -28,13 +28,13 @@
     <!-- Navbar start -->
     <nav class="navbar navbar-expand-lg navbar-light nv-costom">
       <div class="container-fluid">
-        <a class="navbar-brand mb-3" href="#">
+        <a class="navbar-brand" href="#">
           <img
             src="../asset/img/logo.png"
             alt=""
             width="160"
             height="50"
-            class=" align-text-center"
+            class="align-middle align-text-center"
           />
         </a>
         <button
@@ -81,25 +81,22 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    href="#"
-                    onclick="window.location.href='sign-in.php'"
-                    >Bab1</a
+                    href="#table"
+                    >Table 1</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
                     href="#"
-                    onclick="window.location.href='sign-in.php'"
-                    >Bab2</a
+                    >Table 2</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
                     href="#"
-                    onclick="window.location.href='sign-in.php'"
-                    >Bab3</a
+                    >Table 3</a
                   >
                 </li>
               </ul>
@@ -108,8 +105,7 @@
           <div class="d-flex me-5">
             <button
               class="btn btn-custom text-light fw-bold"
-              onclick="window.location.href='sign-in.php'"
-            >
+              onclick="window.location.href='sign-in.php'">
               Logout
             </button>
           </div>
@@ -119,11 +115,11 @@
     <!-- Navbar End -->
 
     <!-- home start -->
-    <article class="container-fluid home-costom" id="home">
+    <article class="container-fluid home-costom " id="home">
       <section class="">
-        <img src="/asset/img/bg.png" alt="" width="1890"
-        height="950"
-        class=" align-text-center img-custom">
+        <img src="/asset/img/bg2.png" alt="" width="1890"
+        height="910"
+        class=" align-text-center img-custom mt-1">
       </section>
     </article>
     <!-- home end -->
@@ -132,14 +128,14 @@
     <article id="input" class="contener1">
       <section class="container-fluid ">
         <div class="container-lg mt-5"> 
-          <h1 class="row justify-content-md-center text-bs-gray-dark ">INPUT</h1>
+          <h1 class="row justify-content-md-center text-bs-gray-dark fw-bolder ">INPUT</h1>
         </div>
-          <div class="form">
+          <div class="form col-md-6 offset-md-3">
         <form id="product-form">
           <input type="text" id="product-name" placeholder="Product Name" />
           <input type="number" id="product-quantity" placeholder="Quantity" />
           <input type="number" id="product-price" placeholder="Price" />
-          <button type="submit">Add Product</button>
+          <button type="submit" class="btn btn-custom text-light fw-bold"">Add Product</button>
         </form>
       </div>
       </section>
@@ -148,13 +144,12 @@
 
     <!-- table inventory start -->
     <article id="table" class="contener2">
-      <section class="container-fluid">
         <section class="container-fluid">
           <div class="container-lg ">
-            <h1 class="row justify-content-md-center text-bs-gray-dark ">INVENTORY</h1>
-          </div class="form">
-        <div class="dataHead">
-          <div class="sorting">
+            <h1 class="row justify-content-md-center text-bs-gray-dark fw-bolder ">INVENTORY</h1>
+          </div>
+        <div class="tabelnya col-md-6 mx-auto">
+          <div class="sorting mb-3">
             <select name="" id="">
               <option value="">Urutkan</option>
               <option value="">Nama</option>
