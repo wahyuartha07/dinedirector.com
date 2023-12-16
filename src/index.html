@@ -14,41 +14,25 @@
       <input type="number" id="product-price" placeholder="Price" />
       <button type="submit">Add Product</button>
     </form>
-    <div id="inventory-list"></div>
-    <div class="sorting">
-      <h2>Tabel Belanja</h2>
-      <select name="" id="">
-        <option value="">nama</option>
-        <option value="">quantity</option>
-        <option value="">total Price</option>
-      </select>
+    <div class="dataHead">
+      <div class="sorting">
+        <h2>Tabel Belanja</h2>
+        <select name="" id="">
+          <option value="">Urutkan</option>
+          <option value="">Nama</option>
+          <option value="">Quantity</option>
+          <option value="">Total Price</option>
+        </select>
+      </div>
+      <table id="inventory-list">
+        <tr id="tableHead">
+          <th>No</th>
+          <th>Nama</th>
+          <th>Quantity</th>
+          <th>Total Harga</th>
+        </tr>
+      </table>
     </div>
-    <table>
-      <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>Quantity</th>
-        <th>Total Harga</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Buku</td>
-        <td>4</td>
-        <td id="total">Rp 20.000</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Pensil</td>
-        <td>4</td>
-        <td id="total">Rp 10.000</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Penghapus</td>
-        <td>4</td>
-        <td id="total">Rp 5.000</td>
-      </tr>
-    </table>
 
     <script src="script.js"></script>
   </body>
