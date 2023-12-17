@@ -1,109 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DineDirector</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" type="image/x-icon" href="/asset/img/favicon.png" />
-    <link rel="stylesheet" href="/asset/css/style.css" />
-  </head>
-  <body>
-    <!-- Navbar start -->
-    <nav class="navbar navbar-expand-lg navbar-light nv-costom">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="../asset/img/logo.png"
-            alt=""
-            width="160"
-            height="50"
-            class="align-middle align-text-center"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active text-bs-gray-dark fs-5 btn-nav"
-                aria-current="page"
-                href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active text-bs-gray-dark fs-5 btn-nav"
-                aria-current="page"
-                href="#input"
-                >Input Product</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active text-bs-gray-dark fs-5 btn-nav"
-                href="#table"
-              >
-                Inventory
-              </a>
-            </li>
-          </ul>
-          <div class="d-flex me-5">
-            <button
-              class="btn btn-custom text-light fw-bold"
-              onclick="window.location.href='sign-in.php'">
-              Logout
-            </button>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DineDirector</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="icon" type="image/x-icon" href="/asset/img/favicon.png" />
+  <link rel="stylesheet" href="/asset/css/style.css" />
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-light nv-costom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../asset/img/logo.png" alt="" width="160" height="50" class="align-middle align-text-center" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-bs-gray-dark fs-5 btn-nav" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-bs-gray-dark fs-5 btn-nav" aria-current="page" href="#input">Input
+              Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-bs-gray-dark fs-5 btn-nav" href="#table">
+              Inventory
+            </a>
+          </li>
+        </ul>
+        <div class="d-flex me-5">
+          <button class="btn btn-custom text-light fw-bold" onclick="window.location.href='sign-in.php'">
+            Logout
+          </button>
         </div>
       </div>
-    </nav>
-    <!-- Navbar End -->
+    </div>
+  </nav>
+  <!-- Navbar End -->
 
-    <!-- home start -->
-    <article class="container-fluid home-costom " id="home">
-      <section class="">
-        <img src="/asset/img/bg2.png" alt="" width="1890"
-        height="910"
-        class=" align-text-center img-custom mt-1">
-      </section>
-    </article>
-    <!-- home end -->
+  <!-- home start -->
+  <article class="container-fluid home-costom " id="home">
+    <section class="">
+      <img src="/asset/img/bg2.png" alt="" width="1890" height="910" class=" align-text-center img-custom mt-1">
+    </section>
+  </article>
+  <!-- home end -->
 
-    <!-- Input barang Start -->
-    <article id="input" class="contener1">
-      <section class="container-fluid ">
-        <div class="container-lg mt-5"> 
-          <h1 class="row justify-content-md-center text-bs-gray-dark fw-bolder ">INPUT</h1>
-        </div>
-          <div class="form col-md-6 offset-md-3">
+  <!-- Input barang Start -->
+  <article id="input" class="contener1">
+    <section class="container-fluid ">
+      <div class="container-lg mt-5">
+        <h1 class="row justify-content-md-center text-bs-gray-dark fw-bolder ">INPUT</h1>
+      </div>
+      <div class="form col-md-6 offset-md-3">
         <form id="product-form">
           <input type="text" id="product-name" placeholder="Product Name" />
           <input type="number" id="product-quantity" placeholder="Quantity" />
@@ -116,33 +85,34 @@
     <!-- Input barang Start end -->
 
     <!-- table inventory start -->
-    <article id="table" class="contener2">
-        <section class="container-fluid">
-          <div class="container-lg ">
-            <h1 class="row justify-content-md-center text-bs-gray-dark fw-bolder ">INVENTORY</h1>
-          </div>
-        <div class="tabelnya col-md-6 mx-auto">
-          <div class="sorting mb-3">
-            <select name="" id="">
-              <option value="">Urutkan</option>
-              <option value="">Nama</option>
-              <option value="">Quantity</option>
-              <option value="">Total Price</option>
-            </select>
-          </div>
-          <table id="inventory-list">
-            <tr id="tableHead">
-              <th>No</th>
-              <th>Nama</th>
-              <th>Quantity</th>
-              <th>Total Harga</th>
-            </tr>
-          </table>
-        </div>
-      </section>
-    </article>
-    <!-- table inventory end -->
+      <article id=" table" class="contener2">
+            <section class="container-fluid con-costom">
+              <div class="container-lg ">
+                <h1 class="row justify-content-md-center text-bs-gray-dark fw-bolder ">INVENTORY</h1>
+              </div>
+              <div class="tabelnya col-md-6 mx-auto">
+                <div class="sorting mb-3">
+                  <select name="" id="">
+                    <option value="">Urutkan</option>
+                    <option value="">Nama</option>
+                    <option value="">Quantity</option>
+                    <option value="">Total Price</option>
+                  </select>
+                </div>
+                <table id="inventory-list">
+                  <tr id="tableHead">
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Quantity</th>
+                    <th>Total Harga</th>
+                  </tr>
+                </table>
+              </div>
+            </section>
+  </article>
+  <!-- table inventory end -->
 
-    <script src="/asset/js/script.js"></script>
-  </body>
+  <script src="/asset/js/script.js"></script>
+</body>
+
 </html>

@@ -35,7 +35,7 @@
 }
 
 body {
-  font-family: "montserrat", sans-serif;
+  font-family: "poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -100,11 +100,19 @@ button:hover {
 
 /* inventory start */
 .contener2{
-  height: 50VH;
+  height: 50vh;
+}
+
+.con-costom {
+  width: 80%;
+  padding: 20px; /* Container padding */
+  border-radius: 10px; /* Container border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Container box shadow */
 }
 
 table {
   width: 100%;
+  
   border-collapse: collapse;
 }
 
@@ -121,7 +129,7 @@ th {
 }
 
 .tabelnya {
-  width: 75%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -136,5 +144,11 @@ th {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0,5rem;
+  border-radius: 4px; /* Sudut lengkungan */
+  background-color: #fff; /* Warna latar belakang */
+  color: #333; /* Warna teks */
+  font-size: 14px; /* Ukuran font */
+  cursor: pointer; /* Pointer cursor saat diarahkan ke elemen */
 }
 /* inventory end */
