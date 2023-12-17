@@ -40,7 +40,7 @@ function displayInventory() {
 
   const titleRow = inventoryList.insertRow();
   titleRow.id = "tableHead";
-  const titleCells = ["No", "Name", "Quantity", "Price", "Action"];
+  const titleCells = ["No", "Product Name", "Quantity", "Price", "Action"];
 
   titleCells.forEach((title) => {
     const th = document.createElement("th");
@@ -60,10 +60,105 @@ function displayInventory() {
     const cellPrice = newRow.insertCell();
     cellPrice.textContent = `Rp.${price[i]}`;
     const cellAction = newRow.insertCell();
-    cellAction.innerHTML = `<button class="btn btn-primary" data-toggle="modal" data-target="#edit-product-2-modal">Edit</button>
-    <button type="submit" class="btn btn-danger">Delete</button>`;
+    cellAction.innerHTML = `<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+    <button type="button" class="btn btn-danger" onclick="deleteData(${i})">Delete</button>`;
+
+    cellAction
+      .querySelector(".btn-primary")
+      .addEventListener("click", function () {
+        $("#exampleModal").modal("show");
+      });
   }
 }
+
+function deleteData(index) {
+  if (confirm("Apakah anda yakin ingin menghapus data ini?")) {
+    productNames.splice(index, 1);
+    quantity.splice(index, 1);
+    price.splice(index, 1);
+    nomor.splice(index, 1);
+    n--;
+
+    const table = document.getElementById("inventory-list");
+
+    table.deleteRow(index + 1);
+
+    for (let i = index; i < n; i++) {
+      nomor[i] = i + 1;
+      table.rows[i + 1].cells[0].textContent = nomor[i];
+    }
+
+    displayInventory();
+  } else {
+    return false;
+  }
+}
+
+function sequentialSearch(x) {
+  for (let i = 0; i < n; i++) {
+    if (productNames[i].toLowerCase() === x.toLowerCase()) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function displaySearchResultInTable(index) {
+  const inventoryList = document.getElementById("inventory-list");
+  inventoryList.innerHTML = ""; 
+
+  const titleRow = inventoryList.insertRow();
+  titleRow.id = "tableHead";
+  const titleCells = ["No", "Product Name", "Quantity", "Price", "Action"];
+
+  titleCells.forEach((title) => {
+    const th = document.createElement("th");
+    th.textContent = title;
+    titleRow.appendChild(th);
+  });
+
+  if (index !== -1) {
+    const newRow = inventoryList.insertRow();
+
+    const cellNo = newRow.insertCell();
+    cellNo.textContent = nomor[index];
+    const cellName = newRow.insertCell();
+    cellName.textContent = productNames[index];
+    const cellQuantity = newRow.insertCell();
+    cellQuantity.textContent = quantity[index];
+    const cellPrice = newRow.insertCell();
+    cellPrice.textContent = `Rp.${price[index]}`;
+    const cellAction = newRow.insertCell();
+    cellAction.innerHTML = `<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+    <button type="button" class="btn btn-danger" onclick="deleteData(${index})">Delete</button>`;
+
+    cellAction
+      .querySelector(".btn-primary")
+      .addEventListener("click", function () {
+        $("#exampleModal").modal("show");
+      });
+  } else {
+    const noResultRow = inventoryList.insertRow();
+    const noResultCell = noResultRow.insertCell();
+    noResultCell.textContent = "Product not found";
+    noResultCell.colSpan = 5; 
+    noResultCell.style.textAlign = "center"; 
+  }
+}
+
+// Event listener untuk button pencarian
+const searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", function () {
+  const searchInput = document.getElementById("searchInput").value.trim();
+
+  if (searchInput !== "") {
+    const resultIndex = sequentialSearch(searchInput);
+    displaySearchResultInTable(resultIndex);
+  } else {
+    displayInventory();
+  }
+});
+
 
 const dropdownItems = document.querySelectorAll(".dropdown-menu .sort-by");
 const dropdownAscDesc = document.querySelectorAll(".dropdown-menu .asc-desc");
