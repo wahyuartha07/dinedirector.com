@@ -41,6 +41,43 @@ body {
 }
 
 /* navbar start */
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.btn-nav {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.btn-nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1px;
+  left: 0;
+  background-color: transparent;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover .btn-nav::before {
+  visibility: visible;
+  background-color: blue;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
 .btn-custom {
   background-color: var(--bs-dark);
 }
@@ -55,16 +92,16 @@ body {
 /* navbar end */
 
 /* home start */
-.home-costom{
+.home-costom {
   background-color: var(--bs-dark3);
 }
-.img-custom{
+.img-custom {
   margin-top: -3rem;
 }
 /* home end */
 
 /* input start */
-.contener1{
+.contener1 {
   height: 50vh;
   width: 100%;
   display: flex;
@@ -95,12 +132,76 @@ button {
 button:hover {
   background-color: #45a049;
 }
-/* input end */
 
+select {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+option {
+  padding: 5px;
+}
+
+.search {
+  width: 100%;
+  margin-bottom: auto;
+  margin-top: 20px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  margin-top: 5px;
+  caret-color: transparent;
+  line-height: 20px;
+  transition: width 0.4s linear;
+}
+
+.search .search-input {
+  padding: 0 10px;
+  width: 85%;
+  caret-color: #536bf6;
+  font-size: 19px;
+  font-weight: 300;
+  color: black;
+  transition: width 0.4s linear;
+}
+
+.search-icon {
+  height: 34px;
+  width: 34px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #536bf6;
+  font-size: 10px;
+  bottom: 38px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.search-icon:hover {
+  color: #fff !important;
+}
+
+a:link {
+  text-decoration: none;
+}
 
 /* inventory start */
-.contener2{
-  height: 50VH;
+.contener2 {
+  height: 50vh;
 }
 
 table {
@@ -138,3 +239,7 @@ th {
   justify-content: space-between;
 }
 /* inventory end */
+
+.dropdown-menu li {
+  cursor: pointer;
+}
